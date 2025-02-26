@@ -12,7 +12,7 @@ export default function AdminSideBar() {
   const locate = useLocation()
   const [isModalOpen, setIsModalOpen] = useState(false);
 const nav = useNavigate()
-  const isActive = (path) => locate.pathname === path;
+
   const handleLogOut = () => {
     setIsModalOpen(true);
   };
@@ -25,6 +25,7 @@ const nav = useNavigate()
   const cancelLogOut = () => {
     setIsModalOpen(false);
   };
+  const isActive = (path) => locate.pathname === path;
   return (
     <>
   <nav className="fixed top-0 z-50 w-full bg-gradient-to-r from-[#06273C] to-[#05456e] dark:bg-gray-800 dark:border-gray-700 pb-5 h-20">
@@ -37,7 +38,6 @@ const nav = useNavigate()
             aria-controls="logo-sidebar"
             type="button"
             className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          onClick={nav("/")}
           >
             <span className="sr-only">Open sidebar</span>
             <svg
