@@ -63,13 +63,13 @@ export default function SideBar() {
               />
             </svg>
           </button>
-          <a href="https://flowbite.com" className="flex ms-2 md:me-24">
+          <button onClick={()=>nav("/")} className="flex ms-2 md:me-24">
             <img
               src={logo}
               alt="logo"
               className="h-10"
             />
-          </a>
+          </button>
           <div className="flex justify-center items-start flex-col sm:flex-row gap-1">
               <h1 className="text-xs sm:text-xl font-semibold">Welcome Back!</h1>
               <h1 className="text-xs sm:text-xl font-semibold">Track Your Home Usage</h1>

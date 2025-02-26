@@ -37,6 +37,7 @@ const nav = useNavigate()
             aria-controls="logo-sidebar"
             type="button"
             className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          onClick={nav("/")}
           >
             <span className="sr-only">Open sidebar</span>
             <svg
@@ -53,13 +54,15 @@ const nav = useNavigate()
               />
             </svg>
           </button>
-          <a href="https://flowbite.com" className="flex ms-2 md:me-24">
+          <button 
+          onClick={()=>nav("/")}
+          className="flex ms-2 md:me-24">
             <img
               src={Logo}
               className="h-10"
               alt="Logo"
             />
-          </a>
+          </button>
         </div>
         <div className="flex items-center">
           <div className="flex items-center ms-3">
