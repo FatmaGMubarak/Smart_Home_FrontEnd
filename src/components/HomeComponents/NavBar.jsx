@@ -4,6 +4,28 @@ import { Link } from "react-scroll";
 import logo from "../../assets/Logo.png";
 
 export default function NavBar() {
+  const links = [
+    {
+      name:"Home",
+      id:"homeSection",
+    },
+    {
+      name:"Services",
+      id:"serviceSection",
+    },
+    {
+      name:"Pricing",
+      id:"pricingSection",
+    },
+    {
+      name:"Testimonials",
+      id:"testimonialSection",
+    },
+    {
+      name:"About Us",
+      id:"aboutUs",
+    },
+  ]
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState("homeSection");
 
@@ -23,13 +45,7 @@ export default function NavBar() {
         </div>
         <div className="items-center justify-between hidden w-full md:flex md:w-auto" id="navbar-sticky">
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            {[
-              { name: "Home", id: "homeSection" },
-              { name: "Services", id: "serviceSection" },
-              { name: "Pricing", id: "pricingSection" },
-              { name: "Testimonials", id: "testimonialSection" },
-              { name: "About Us", id: "aboutUs" }
-            ].map((item) => (
+            {links.map((item) => (
               <li key={item.id}>
                 <Link
                   to={item.id}
